@@ -199,11 +199,8 @@ def FunIntQues():
                 print("Fizz")
             else:
                 print(FizzBuzz)
-        CNT = input("Do you wish to continue? Y/N (Y)- Run Quotes Again (N)-Return To Main Menu").upper()
-        if CNT == "Y":
-            continue
-        else:
-            break
+        CNT = input("Press any key to continue....")
+        return CNT
 
 def StrDates():
      while True:
@@ -214,12 +211,10 @@ def StrDates():
             EmpBDay = "1999-09-09"
             EmpRefNum = (f"{EmpFirstName[0]}{EmpLastName[0]}{PhoneNum[10:12]}{EmpStartDate[5:7]}{EmpBDay[2:4]}")
             print(f"This Is The Employee Reference Number {EmpRefNum}")
-            Continue = input("Do you wish to continue? Y/N ( (Y)-to enter another form (N)-to return to main menu").upper()
+            Continue = input("Press any key to continue....")
             print()
-            if Continue == "Y":
-                continue
-            elif Continue =="N":
-                break
+            return Continue
+
 
 def GraphMonClaim():
     while True:
@@ -240,11 +235,9 @@ def GraphMonClaim():
 
 
         plt.show()
-        CNT = input("Do you wish to continue? Y/N (Y)- Run Graph Again (N)-Return To Main Menu").upper()
-        if CNT == "Y":
-            continue
-        else:
-            break
+        CNT = input("Press any key to continue....")
+        return CNT
+
 
 while True:
     # Menu for user
