@@ -1,11 +1,13 @@
+# Authors: Cameron D'Amico and Jordan Kelloway
+# Date Completed:
+# Date Due: June 26, 2022
+
 import math
 import datetime
 import matplotlib
 import FormatValues as FV
 
-# Authors: Cameron D'Amico and Jordan Kelloway
-# Date Completed:
-# Date Due: June 26, 2022
+
 # Constants
 CurDate = datetime.datetime.now()
 OWN_CAR_RATE = 85.00
@@ -16,7 +18,7 @@ HST_RATE = 0.15
 # Functions
 
 
-def DateConverter(StartDate):
+def DateConverter(StartDate):                               #Date Connversion Function
     DateDSP = StartDate.strftime("%B,%d %Y")
     return DateDSP
 
@@ -138,7 +140,6 @@ def EmpTravClaim():
         TotalClaimAmt = ClaimAmt + HST
 
 
-        print(HST,DailyAmount,MileageAmount,ClaimMSG,RentMSG,ClaimAmt,TotalClaimAmt,Bonus)
         print()
         print()
         print("The Employees First Name Is {:>}".format(EmpFirstName))
@@ -168,7 +169,7 @@ def EmpTravClaim():
 
 
 
-def BonusCalc(NumDays,TotalKms,ClaimType,StartDate,RentOwnVal):                     # This Function Calculates the bonus value and returns it to the program
+def BonusCalc(NumDays,TotalKms,ClaimType,StartDate,RentOwnVal):    # This Function Calculates the bonus value and returns it to the program
     if NumDays > 3:
         Bonus1 = 100
     else:
@@ -188,16 +189,21 @@ def BonusCalc(NumDays,TotalKms,ClaimType,StartDate,RentOwnVal):                 
     Bonus = Bonus1 + Bonus2 + Bonus3 + Bonus4
     return Bonus
 def FunIntQues():
-    for FizzBuzz in range(1, 101):
-        if FizzBuzz % 5 == 0 and FizzBuzz % 8 == 0:
-            print("FizzBuzz")
-        elif FizzBuzz % 8 == 0:
-            print("Buzz")
-        elif FizzBuzz % 5 == 0:
-            print("Fizz")
+    while True:
+        for FizzBuzz in range(1, 101):
+            if FizzBuzz % 5 == 0 and FizzBuzz % 8 == 0:
+                print("FizzBuzz")
+            elif FizzBuzz % 8 == 0:
+                print("Buzz")
+            elif FizzBuzz % 5 == 0:
+                print("Fizz")
+            else:
+                print(FizzBuzz)
+        CNT = input("Do you wish to continue? Y/N (Y)- Run Quotes Again (N)-Return To Main Menu").upper()
+        if CNT == "Y":
+            continue
         else:
-            print(FizzBuzz)
-    FizzBuzzMsg = input("Press any key to continue... ")
+            break
 
 def StrDates():
      while True:
@@ -216,23 +222,29 @@ def StrDates():
                 break
 
 def GraphMonClaim():
-    import matplotlib.pyplot as plt
-    import numpy as np
-    x = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"]
-    y = []
-    for months in range(1,13):
-        MonthSales = input("Enter Month Sales For " + x[months - 1] + ":")
-        y.append(MonthSales)
-    plt.title("Monthly Sales Over The Past 12 Months ")
-    plt.grid(True)
-    plt.plot(x,y)
-    plt.xlabel("Months")
-    plt.ylabel("Sales Amount")
+    while True:
+        import matplotlib.pyplot as plt
+        import numpy as np
+        x = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"]
+        y = []
+        for months in range(1,13):
+            MonthSales = input("Enter Month Sales For " + x[months - 1] + ":")
+            y.append(MonthSales)
+        plt.title("Monthly Sales Over The Past 12 Months ")
+        plt.grid(True)
+        plt.plot(x,y)
+        plt.xlabel("Months")
+        plt.ylabel("Sales Amount")
 
-    print(y)
+        print(y)
 
 
-    plt.show()
+        plt.show()
+        CNT = input("Do you wish to continue? Y/N (Y)- Run Quotes Again (N)-Return To Main Menu").upper()
+        if CNT == "Y":
+            continue
+        else:
+            break
 
 while True:
     # Menu for user
