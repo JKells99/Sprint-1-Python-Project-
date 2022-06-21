@@ -1,7 +1,7 @@
 # Authors: Cameron D'Amico and Jordan Kelloway
 # Date Completed:
 # Date Due: June 26, 2022
-#Does This Work???
+
 
 import math
 import datetime
