@@ -4,7 +4,6 @@
 
 import math
 import datetime
-import matplotlib
 import FormatValues as FV
 
 
@@ -240,7 +239,7 @@ def GraphMonClaim():
 
 
         plt.show()
-        CNT = input("Do you wish to continue? Y/N (Y)- Run Quotes Again (N)-Return To Main Menu").upper()
+        CNT = input("Do you wish to continue? Y/N (Y)- Run Graph Again (N)-Return To Main Menu").upper()
         if CNT == "Y":
             continue
         else:
