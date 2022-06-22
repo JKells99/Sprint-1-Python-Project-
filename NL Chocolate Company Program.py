@@ -218,23 +218,24 @@ def StrDates():
 
 def GraphMonClaim():
     while True:
-        import matplotlib.pyplot as plt
-        import numpy as np
-        x = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"]
-        y = []
-        for months in range(1,13):
-            MonthSales = input("Enter Month Sales For " + x[months - 1] + ":")
-            y.append(MonthSales)
-        plt.title("Monthly Sales Over The Past 12 Months ")
-        plt.grid(True)
-        plt.plot(x,y)
-        plt.xlabel("Months")
-        plt.ylabel("Sales Amount")
+        try:
+            import matplotlib.pyplot as plt
+            import numpy as np
+            x = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"]
+            y = []
+            for months in range(1,13):
+                MonthSales = int(input("Enter Month Sales For " + x[months - 1] + ":"))
+                y.append(MonthSales)
+            plt.title("Monthly Sales Over The Past 12 Months ")
+            plt.grid(True)
+            plt.plot(x,y)
+            plt.xlabel("Months")
+            plt.ylabel("Sales Amount")
 
-        print(y)
-
-
-        plt.show()
+            print(y)
+            plt.show()
+        except:
+            print("Error")
         CNT = input("Press any key to continue....")
         return CNT
 
