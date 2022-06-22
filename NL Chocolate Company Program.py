@@ -234,10 +234,11 @@ def GraphMonClaim():
 
             print(y)
             plt.show()
+            CNT = input("Press any key to continue....")
+            return CNT
         except:
-            print("Error")
-        CNT = input("Press any key to continue....")
-        return CNT
+            print("Error please enter a numeric value!")
+
 
 
 while True:
