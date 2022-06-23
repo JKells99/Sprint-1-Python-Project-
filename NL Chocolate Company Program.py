@@ -37,6 +37,7 @@ def EmpTravClaim():
                 print("Employee Number Cannont Be Blank")
             else:
                 break
+
         while True:                                                           # Loop For First Name
             EmpFirstName = input("Enter Employee's First Name:").title()
             while not EmpFirstName.isalpha():
@@ -44,6 +45,7 @@ def EmpTravClaim():
                 EmpFirstName = input("Enter Employee's First Name:").title()
             else:
                 break
+
         while True:                                                             #Loop For Last Name
             EmpLastName = input("Enter Employee's Last Name:").title()
             while not EmpLastName.isalpha():
@@ -51,6 +53,7 @@ def EmpTravClaim():
                 EmpLastName = input("Enter Employee's First Name:").title()
             else:
                 break
+
         while True:                                                            #Loop For Location
             Location = input("Enter The Location Of The Trip:").title()
             while not Location.isalpha():
@@ -65,6 +68,7 @@ def EmpTravClaim():
                 break
             except:
                 print("Invalid date format please try again (yyyy-mm-dd)")
+
         while True:                                                  # End Date Loop
             try:
                 EndDate = input("Enter The End Date (yyyy-mm-dd):")
@@ -75,10 +79,11 @@ def EmpTravClaim():
                     break
             except:
                 print("Invalid date format please try again (yyyy-mm-dd)")
+
         while True:                                                # Loop For Number Of days
             NumDays = (EndDate - StartDate).days
-            if NumDays > 7:
-                print("Error Input End Date Again. Days Stayed Can Not Exceed 7!")
+            if NumDays > 7 or NumDays <1:
+                print("Error Input End Date Again. Days Stayed Can Not Exceed 7 Or Be Less Than 1!")
                 EndDate = input("Enter The End Date (yyyy-mm-dd):")
                 EndDate = datetime.datetime.strptime(EndDate, "%Y-%m-%d")
             elif NumDays < 7:
@@ -103,12 +108,14 @@ def EmpTravClaim():
             else:
                 TotalKms = 0
                 break
+
         while True:                                                        #Claim Type Validation Loop
             ClaimType = input("enter the claim type (S or E)  (S)-Standard or (E)-Executive: ").upper()
             if ClaimType == "S" or ClaimType == "E":
                 break
             else:
                 print("Error claim type must be S or E ")
+
     # Calculations Start Here
         DailyAmount = 0
         MileageAmount = TotalKms * MILEAGE_RATE
