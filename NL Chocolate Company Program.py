@@ -1,5 +1,6 @@
+# Sprint Week Python Program
 # Authors: Cameron D'Amico and Jordan Kelloway
-# Date Completed:
+# Date Completed: June 25
 # Date Due: June 26, 2022
 
 
