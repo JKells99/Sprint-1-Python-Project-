@@ -87,7 +87,7 @@ def EmpTravClaim():
                 print("Error Input End Date Again. Days Stayed Can Not Exceed 7 Or Be Less Than 1!")
                 EndDate = input("Enter The End Date (yyyy-mm-dd):")
                 EndDate = datetime.datetime.strptime(EndDate, "%Y-%m-%d")
-            elif NumDays < 7:
+            elif NumDays <= 7:
                 break
             elif NumDays <1:
                 print("Error ")
